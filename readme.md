@@ -2,6 +2,8 @@
 
 [official documents](https://docs.openfaas.com/)
 
+more [information](https://chatgpt.com/share/69b90e5d-8158-8002-800b-7459d017788a) about openfaas 
+
 ## install faas-cli
 
 ```
@@ -24,7 +26,15 @@ faas-cli new --lang golang-middleware echo
 
 ```
 faas-cli build
-docker run echo:latest
+docker run -p 8080:8080 echo:latest
+```
+
+## call openfaas funciton
+
+```
+curl -X POST http://localhost:8080 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"test"}'
 ```
 
 ## deploy function
