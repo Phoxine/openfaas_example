@@ -7,4 +7,8 @@ functions:
     lang: golang-middleware
     handler: ./echo
     image: docker.io/{your_dockerhub_username}/echo:latest
-
+    labels:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "3"
+      com.openfaas.scale.factor: "50"
+      

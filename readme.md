@@ -139,3 +139,18 @@ curl -X POST http://127.0.0.1:8080/async-function/echo \
      -H "Content-Type: application/json" \
      -d '{"msg":"hello"}'
 ```
+
+## others
+
+### auto-scaling
+
+[Legacy scaling for the Community Edition (CE)](https://docs.openfaas.com/architecture/autoscaling/#legacy-scaling-for-the-community-edition-ce)
+
+
+```
+labels:
+  com.openfaas.scale.min: "1"
+  com.openfaas.scale.max: "3"
+  com.openfaas.scale.factor: "50"
+```
+
