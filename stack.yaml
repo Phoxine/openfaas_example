@@ -6,5 +6,5 @@ functions:
   echo:
     lang: golang-middleware
     handler: ./echo
-    image: echo:latest
+    image: docker.io/{your_dockerhub_username}/echo:latest
 
